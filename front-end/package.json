@@ -1,0 +1,30 @@
+{
+  "name": "Front-End",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Angular2 Front-End Application",
+  "keywords": ["Angular2", "Front-End"],
+  "dependencies": {
+  	"angular2": "2.0.0-beta.0",
+    "systemjs": "0.19.6",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.33.3",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.0",
+    "zone.js": "0.5.10"
+  },
+  "devDependencies": {
+    "forever": "^0.15.1"
+  },
+  "scripts": {
+    "debug": "node debug app.js",
+    "start": "forever -w start app.js"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mushdigital20/sails-boiler-plate.git"
+  },
+  "author": "Pedro Mello <pedro@mushdigital.com>",
+  "license": ""
+}
