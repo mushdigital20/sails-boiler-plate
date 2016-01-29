@@ -11,9 +11,36 @@ import babelify from 'babelify';
 
 import del from 'del';
 
+const destination_folder = 'public';
+
+const mainBowerFiles = require('main-bower-files');
+
+gulp.task('bower', () => {
+  return gulp.src(mainBowerFiles(), {
+      base: 'bower_components'
+    })
+    .pipe(gulp.dest('public/lib'));
+});
+
+gulp.task('bootstrap:prepareLess', ['bower'], () => {
+  return gulp.src('less/bootstrap/variables.less')
+    .pipe(gulp.dest('public/lib/bootstrap/less'));
+});
+
+gulp.task('bootstrap:compileLess', ['bootstrap:prepareLess'], () => {
+  return gulp.src('public/lib/bootstrap/less/bootstrap.less')
+    //.pipe(less())
+    .pipe(gulp.dest('public/lib/bootstrap/dist/css'));
+});
+
 gulp.task('copy', () => {
+  gulp.src([
+    'src/views/**/*.html'
+  ])
+  .pipe(gulp.dest(destination_folder + '/views'));
+
   return gulp.src('src/index.html')
-    .pipe(gulp.dest('public'));
+    .pipe(gulp.dest(destination_folder));
 });
 
 gulp.task('build', ['copy'], () => {

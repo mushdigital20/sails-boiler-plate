@@ -1,0 +1,35 @@
+{
+  "name": "babel-angular2-app",
+  "description": "A skeleton Angular 2 app built with babel.",
+  "main": [
+   "./dist/css/bootstrap.css",
+   "./dist/js/bootstrap.js",
+   "./dist/fonts/glyphicons-halflings-regular.eot",
+   "./dist/fonts/glyphicons-halflings-regular.svg",
+   "./dist/fonts/glyphicons-halflings-regular.ttf",
+   "./dist/fonts/glyphicons-halflings-regular.woff"
+  ],
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/!(variables).less", "dist/fonts/*", "dist/js/*"
+      ]
+    }
+  },
+  "authors": [
+    "Shuhei Kagawa <shuhei.kagawa@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/mushdigital20/sails-boiler-plate",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

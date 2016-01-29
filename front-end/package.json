@@ -4,14 +4,15 @@
   "description": "A skeleton Angular 2 app built with babel.",
   "scripts": {
     "postinstall": "webdriver-manager update",
-    "start": "gulp",
+    "start": "npm run server",
     "build": "gulp build",
     "watch": "gulp watch",
     "clean": "gulp clean",
     "test": "npm run unit && npm run e2e",
     "unit": "karma start --single-run",
     "tdd": "karma start",
-    "e2e": "npm run build && protractor"
+    "e2e": "npm run build && protractor",
+    "server": "http-server public"
   },
   "author": "Shuhei Kagawa <shuhei.kagawa@gmail.com>",
   "repository": "shuhei/babel-angular2-app",
@@ -27,6 +28,7 @@
     "babelify": "^7.2.0",
     "babylon": "6.3.20",
     "browserify": "^12.0.1",
+    "concat": "^1.0.0",
     "del": "^2.2.0",
     "gulp": "^3.9.0",
     "gulp-sourcemaps": "^1.6.0",
@@ -38,6 +40,7 @@
     "karma-jasmine": "^0.3.6",
     "karma-phantomjs-launcher": "^0.2.1",
     "karma-source-map-support": "^1.1.0",
+    "main-bower-files": "^2.11.1",
     "object-assign": "^4.0.1",
     "phantomjs": "^1.9.19",
     "protractor": "^3.0.0",
@@ -48,6 +51,7 @@
   "dependencies": {
     "angular2": "2.0.0-beta.0",
     "babel-polyfill": "^6.3.14",
+    "bower": "^1.7.7",
     "es6-shim": "^0.33.13",
     "reflect-metadata": "0.1.2",
     "rxjs": "^5.0.0-beta.0",
